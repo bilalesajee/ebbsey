@@ -1,0 +1,262 @@
+.header {
+    @media #{$query991} {
+        width: 100%;
+        top: 0px;
+        position: fixed;
+        left: 0px;
+        z-index: 3;
+    }
+    position: relative;
+    z-index:10
+}
+.messages_page {
+    @media #{$query991} {
+        .container {
+            max-width: 100%;
+        }
+    }
+}
+.gap_fixed_header {
+    height: 94px;
+    &.messages {
+        @media #{$query991} {
+            height: 52px;
+        }
+    }
+    @media #{$querymin992} {
+        display: none;
+    }
+}
+.topbar {
+    background-color: $black;
+    padding: 10px 0px;
+    @media #{$query767} {
+        padding: 13px 0px 7px 0px;
+    }
+    .booking {
+        font-size: 13px;
+        span {
+            color: #a3a3a3;
+            padding-top: 4px;       
+        }
+    }
+    .search {
+        text-align: right;
+        width: 100%;
+        @media #{$query767} {
+            text-align: left;
+        }
+        form {
+            margin-bottom: 0px;
+            font-size: 13px;
+            @media #{$query767} {
+                @include flex();
+            }
+        }
+        label {
+            color: #a3a3a3;
+            margin:0px;
+            width: 120px;
+            text-align: left;
+        }
+        .searchfield {
+            border: none;
+            border-bottom: 1px solid #a3a3a3;
+            background-color: transparent;
+            color: #fff;
+            @include transform(translate(0,-3px));
+            width: 100%;
+        }
+    }
+}
+.logo {
+    max-width: 220px;
+}
+.main-nav {
+    background-color: $orange;
+    position: relative;
+    @media #{$query991} {
+        display: none;
+    }    
+    .header-menu {
+        &:after {
+            content: '';
+            position: absolute;
+            background-color: #19191e;
+            left: 100%;
+            top: 0px;
+            width: 100%;
+            height: 101%;
+            padding: 0 500%;
+            margin-left: -99px;
+            @include transform(skew(-23deg, 0));
+            z-index: 0;
+        }
+    }
+
+    .social {
+        margin:  0px 0px 0px 0px;
+        padding: 0px;
+        position: relative;
+        z-index: 1;
+        li {
+            display: inline-block;
+            padding: 0 5px;
+            list-style: none;            
+            a {
+                color: $white;
+                display: block;
+                padding: 0 5px;
+                &:hover {
+                    color: $orange;
+                }
+            }
+        }
+    }
+}
+.navigation {
+    margin:  0px 50px 0px 0px;
+    padding: 0px;
+    background-color: $orange;
+    > li {
+        display: inline-block;
+        list-style: none;
+        position: relative;
+        &:hover {
+            > a {
+                color: #000;
+                &:after {
+                    display: block;
+                }
+            }
+            > ul {
+                display: block;
+            }
+        }
+        .profile-pic {
+            width: 38px;
+            height: 38px;
+            display: inline-block;
+            background-size: cover;
+            position: absolute;
+            left: 18px;
+            top: 50%;
+            margin-top: -19px;
+        }
+
+        &.setting_listitem {
+            > a {
+                padding-left: 65px;
+                padding-right: 20px;
+            }
+        }
+
+        > a {
+            color: #fff;
+            text-decoration: none;
+            padding: 23px 13px 20px 13px;
+            position: relative;
+            display: block;
+            font-size: 14px;
+            z-index: 1;
+
+            @media #{$query1199} {
+                padding: 23px 8px 20px 8px; 
+            }  
+
+            &:hover {
+                color: #000;
+                &:after {
+                    display: block;
+                }
+            }
+            &:after {
+                content: '';
+                height: 100%;
+                width: 100%;
+                background-color: #fff;
+                position: absolute;
+                z-index: -1;
+                top: 0;
+                left: 0;
+                @include transform(skew(-20deg, 0));
+                display: none;
+            }
+        }
+        &.active a {
+            color: #000;
+            &:after{
+                display: block;
+            }
+        }
+
+    }
+
+    ul {
+        padding: 0px;
+        margin: 0px;
+        position: absolute;
+        background: $white;
+        left: -11px;
+        width: 100%;
+        min-width: 190px;
+        display: none;
+        z-index: 9;
+        li {
+            list-style: none;
+            &.google_calendar {
+                padding: 9px 15px;
+                font-size: 13px;
+                color: #7b7776;
+                text-decoration: none;
+            }
+            &.earnings {
+                a {
+                    background-color: #4d475f;
+                    color: $white;
+                    .amount {
+                        float: right;
+                    }
+                    .withdraw {
+                        display: block;
+                        color: $orange;
+                        text-decoration: underline;
+                        font-size: 11px;
+                    }
+                    &:hover {
+                        color: #000;
+                    }
+                }
+            }
+            a {
+                padding: 9px 15px;
+                font-size: 13px;
+                display: block;
+                color: #7b7776;
+                text-decoration: none;
+
+                &:hover {
+                    background-color: #f0f0f0;
+                }
+                .badge {
+                    background-color: $orange;
+                    width: 23px;
+                    height: 23px;
+                    line-height: 23px;
+                    text-align: center;
+                    padding: 0px;
+                    float: right;
+                    @include borderRadius(50%);
+                    color: $white;
+                }
+            }
+        }
+    }
+}
+@media #{$querymin992_1199} {
+    .header {
+        .container {
+            max-width: 100%;
+        }
+    }
+}

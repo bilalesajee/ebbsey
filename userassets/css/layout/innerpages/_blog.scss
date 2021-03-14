@@ -1,0 +1,160 @@
+/************************************************************
+                Blog Page Style Start
+*************************************************************/
+.blog_page {
+    background: {
+        size: contain;
+        position: center top;
+        repeat: no-repeat;
+        image: url('../images/image22.jpg');
+    }
+    .blog_header {
+        padding: 80px 0px 40px 0px;
+        @media #{$query991} {
+            padding: 50px 0px 30px 0px;
+        }
+    }
+}
+.single_blog_page {
+    background: {
+        size: contain;
+        position: center top;
+        repeat: no-repeat;
+        image: url('../images/image23.jpg');
+    }
+}
+.blog_body {
+    padding: 30px 0 80px;
+    .container {
+        max-width: 700px;
+    }
+    .title {
+        padding: 20px 0px;
+        text-align: center;
+        max-width: 80%;
+        margin: 0 auto;
+        h1 {
+            font-size: 25px;
+            color: $orange;
+            font-weight: bold;
+            @include textShadow(2px 2px #0e0b16);
+        }
+        .date {
+            font-weight: bold;
+            margin-top: 14px;
+        }
+    }
+    .featured_image {
+        margin-bottom: 40px;
+        img {
+            width: 100%;
+        }
+    }
+    .text_content {
+        font-size: 95%;
+    }
+    .text_content h2,
+    .text_content h3,
+    .text_content h4,
+    .text_content h5,
+    .text_content h6  {
+        margin-top: 30px;
+        font-weight: bold;
+    }
+}
+.blog_pagination {
+    padding: 30px 0 50px 0;
+    ul {
+        padding: 0px;
+        margin: 0px;
+        list-style: none;
+        li {
+            padding: 0 7px;
+            @media #{$query991} {
+                padding: 0 3px;
+            }
+            margin-bottom: 5px;
+            &.first-link,
+            &.last-link{
+                a {
+                    border: 1px solid #4c4954;
+                    color: $orange;
+                    background-color: transparent;
+                    padding: 4px 20px;
+                }
+            }
+            a {
+                display: block;
+                background-color: #4c4954;
+                @include borderRadius(25px);
+                padding: 4px 11px;
+                font-weight: bold;
+                color: $white;
+                text-decoration: none;
+                &:hover {
+                    background-color: $orange;
+                    color: $white;
+                }
+            }
+            &.current {
+                a {
+
+                }
+            }
+        }
+    }
+}
+.blog_post {
+    background-color: #19191e;
+    margin-bottom: 30px;
+    height: 100%;
+    padding-bottom: 10px;
+    position: relative;
+
+    .image {
+        position: relative;
+        img {
+            width: 100%;
+        }
+        .img {
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            background: {
+                size: cover;
+                position: center center;
+            }
+        }
+    }
+    .content {
+        padding: 20px;
+        .title {
+            font-size: 16px;
+            font-weight: bold;
+            line-height: 21px;
+        }
+        p {
+            color: #4e485f;
+            &:last-child {
+                margin-bottom: 0px;
+            }
+            &:empty {
+                display: none;
+            }
+        }
+    }
+    .btn {
+        text-transform: uppercase;
+        font-size: 13px;
+        position: absolute;
+        left: 0px;
+        bottom: 0px;
+        width: 100%;
+    }
+}
+/************************************************************
+                About Page Style End
+*************************************************************/

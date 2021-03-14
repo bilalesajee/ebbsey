@@ -1,0 +1,64 @@
+/************************************************************
+                Create Class Page Style Start
+*************************************************************/
+.upload_multiple_photos {
+    border: 1px dashed #ffffff;
+    padding: 25px 20px 25px 30px;
+    background-color: #17141f;
+    @media #{$query767} {
+        padding: 15px;
+    }
+    .file_upload_btn2 {
+        background-color: #4e485f;
+    }
+    .image_wrap_outer {
+        padding: 5px;
+        .image_wrap {
+            position: relative;
+            .spacer {
+                width: 86px;
+                height: 86px;
+
+                @media #{$query767} {
+                    width: 70px;
+                    height: 70px;
+                }
+            }
+            .image {
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                left: 0px;
+                top: 0px;
+                background-size: cover;
+                background-position: center center;
+            }
+            .custom-checkbox {
+                position: absolute;
+                right: 0px;
+                bottom: 0px;
+                z-index: 999;
+                width: 16px;
+                height: 16px;
+                margin: 0px;
+                padding: 0px;
+                min-height: inherit;
+
+                .custom-control-label {
+                    position: absolute;
+
+                    &:before, &:after {
+                        top: 0rem;
+                        left: 0rem;
+                    }
+                }
+            }
+        }
+    }
+    .custom-control-label:before {
+        background-color: rgba(0,0,0,1);
+    }
+}
+/************************************************************
+                Create Class Page Style End
+*************************************************************/

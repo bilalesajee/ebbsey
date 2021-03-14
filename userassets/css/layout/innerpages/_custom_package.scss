@@ -1,0 +1,99 @@
+/************************************************************
+                Custom Package Style Start
+*************************************************************/
+.custom_package_wrap {
+
+    max-width: 600px;
+    margin: 0 auto;
+
+    .package_header {
+        background: #24212c;
+        padding: 20px;
+        h2 {
+            @media #{$query767} {
+                margin-bottom: 0px;
+            }
+        }
+        .btn {
+            font-size: 22px;
+            cursor: inherit;
+            &:hover {
+                background: $orange;
+            }
+            @media #{$query767} {
+                margin-top: 10px;
+            }
+
+        }
+        .number_passes {
+            color: #6c6c6c;
+        }
+    }
+    .package_body {
+        background: rgba(14, 11, 22, 0.8);
+        padding: 10px 30px 30px 30px;
+
+        @media #{$query991} {
+            padding: 10px 15px 30px 15px;
+        }
+
+        .eb-form-control, .form-control:disabled, .form-control[readonly] {
+            border-radius: 3px;
+        }
+
+        .form-section {
+            border-bottom: 2px dashed #333139;
+            padding: 25px 0;
+        }
+
+        .total_payment {
+            padding: 10px;
+            border-bottom: 2px dashed #333139;
+            margin-bottom: 20px;
+
+            .total_payment_label {
+                font-size: 20px;
+            }
+            .price {
+                .current {
+                    color: $orange;
+                    font-size: 27px;
+                    font-weight: 600;
+                    margin-right: 7px;
+                }
+                .prev {
+                    color: #5d5d5d;
+                    font-size: 17px;
+                    text-decoration: line-through;
+                }
+            }
+        }
+
+        .coupen-title {
+            font-size: 16px;
+            font-weight: bold;
+        }
+    }
+}
+.payment_form .btn_in_input {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    height: 100%;
+    width: 30px;
+
+    .btn_coupen {
+        background: #557724;
+        border-color: #557724;
+        border-radius: 5px;
+        font-weight: bold;
+
+        &:hover {
+            background: #618e1f;
+            border-color: #618e1f;
+        }
+    }
+}
+/************************************************************
+                Custom Package Style End
+*************************************************************/

@@ -1,0 +1,43 @@
+.about-home {
+    padding: 60px 0px 100px 0px;
+    @media #{$query991} {
+        padding: 40px 0px 50px 0px;
+    }
+
+    .details {
+        p {
+            color: #000;
+        }
+        h2 {
+            font-weight: 900;
+            color: #000;
+        }
+    }
+    .images_group {
+        position: relative;
+        padding-top: 53px;
+        margin-left: 50px;
+        @media #{$query991} {
+            margin-left: 0px;
+        }
+        .image1, .image2, .image3 {
+            width: 205px;
+            height: 270px;
+            position: absolute;
+            background-size: cover;
+        }
+        .image1 {
+            top: 250px;
+            z-index: 1;
+        }
+        .image2 {
+            left: 26%;
+        }
+        .image3 {
+            left: 57%;
+            top: 121px;
+            z-index: -1;
+        }
+
+    }
+}

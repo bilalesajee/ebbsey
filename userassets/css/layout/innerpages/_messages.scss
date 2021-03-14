@@ -1,0 +1,390 @@
+/************************************************************
+                Messages Page Style Start
+*************************************************************/
+.messages_wrap {
+    background-color: #24212c;
+}
+.message_userlist_wrap,
+.message_chat_wrap {
+    @media #{$query767} {
+        position: fixed;
+        width: 100%;
+        top: 0px;
+        height: 100%;
+        background: #24212c;
+        padding: 0px 10px;
+    }
+    @extend %transition;
+}
+.message_userlist_wrap  {
+    @media #{$query767} {
+        left: 0px;
+        padding: 102px 0 0px;
+    }
+    .chat_user_list_wrap {
+        @media #{$query767} {
+            height: 100%;
+        }
+    }
+    .search_field {
+        @media #{$query767} {
+            position: absolute;
+            width: 100%;
+            top: 52px;
+            left: 0;
+            height: 48px;
+        }
+    }    
+}
+.message_chat_wrap {
+    @media #{$query767} {
+        left: 100%;
+        padding: 102px 10px 70px;
+    }
+}
+.active_user_mobile {
+    .message_userlist_wrap  {
+        @media #{$query767} {
+            left: -100%;
+        }
+    }
+    .message_chat_wrap {
+        @media #{$query767} {
+            left: 0%;
+        }
+    }    
+}
+.chat_user_list {
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+
+    > li {
+        padding: 5px;
+        @media #{$query767} {
+            padding: 5px 0px;
+        }
+        border-bottom: 1px solid #2a2a30;
+        > a {
+            display: block;
+            padding: 10px;
+            border: 1px solid transparent;
+            text-decoration: none;
+
+            &:hover {
+                border-color: #2a2a30; 
+                background-color: #0e0b16;
+
+                .desc, p {
+                    color: $white;
+                }
+                h6 {
+                    .time {
+                        color: $white;
+                    }
+                }
+            }
+        }
+        &.active {
+            > a {
+                border-color: #2a2a30; 
+                background-color: #0e0b16;
+            }
+            .desc, p {
+                color: $white;
+            }
+            h6 {
+                .time {
+                    color: $white;
+                }
+            }
+        }
+    }
+    li {
+        .image {
+            .img {
+                width: 45px;
+                height: 45px;
+                @include borderRadius(50%);
+                background-size: cover;
+                background-position: center center;
+            }
+            margin-right: 10px;
+        }
+        .desc {
+            color: #848386;
+            line-height: 17px;
+            font-size: 12px;
+            width: 100%;
+            h6 {
+                color: $white;
+                font-weight: 900;
+                margin-bottom: 3px;
+
+                .time {
+                    float: right;
+                    color: $orange;
+                    font-weight: 300;
+                    font-size: 13px;
+                }
+            }
+            p {
+                color: #848386;
+                margin-bottom: 0px;
+                line-height: 17px;
+                font-size: 12px;
+            }
+        }
+    }
+}
+.chat_head {
+    height: 47px;
+    padding: 0 25px;
+    @media #{$query767} {
+        position: absolute;
+        top: 53px;
+        left: 0px;
+        width: 100%;
+        padding: 0 15px;
+    } 
+    .arrowback {
+        cursor: pointer;
+        display: none;
+        @media #{$query767} {
+            display: block;
+        }
+    }
+    > .name {
+        color: $orange;
+        font-weight: 900;
+
+    }
+}
+.active_chatBox {
+    background-color: #1b1823;
+    height: 300px;
+    overflow: auto;
+    @media #{$query767} {
+        height: 100%;
+    }
+}
+.chat_list {
+    padding: 15px;
+    margin: 0px;
+    list-style: none;
+    li {
+        margin-bottom: 15px;
+    }
+    .profile_image {
+        margin-right: 22px;
+        margin-top: -11px;
+        @media #{$query767} {
+            display: none;
+        }
+        .img {
+            width:42px; 
+            height:42px;
+            background-size: cover;
+            background-position: center center;
+            @include borderRadius(50%);
+        }
+    }
+    .chat_body {
+        font-size: 13px;
+        max-width: 80%;
+        .text {
+            background-color: #f1f1f1;
+            color: #615f67;
+            @include borderRadius(9px);
+            position: relative;
+            padding: 6px 17px;
+            word-break: break-all;
+
+            &:before {
+                content: '';
+                position: absolute;
+                left: -19px;
+                top: 50%;
+                @include transform(translateY(-50%));
+                border: 11px solid transparent;
+                border-top-width: 8px;
+                border-bottom-width: 8px;
+                border-right-color: #f1f1f1; 
+                @media #{$query767} {
+                    display: none;
+                }
+            }
+        }
+        .send_time {
+            font-size: 10px;
+            color: #848386;
+        }
+    }
+    li.right {
+        .profile_image {
+            margin-right: 0px;
+            margin-left: 22px;
+        }
+        .chat_body {
+            .text {
+                background-color: $orange;
+                color: $white;
+                &:before {
+                    left: auto;
+                    right: -19px;
+                    border-right-color: transparent; 
+                    border-left-color: $orange; 
+                }
+            }
+        }
+    }
+    .uploaded_image {
+        img {
+            max-width: 300px;
+            width: 100%;
+        }
+    }
+}
+.chat_textbox {
+    position: relative;
+    @media #{$query767} {
+        position: absolute;
+        left: 0px;
+        width: 100%;
+        bottom: 0px;
+        height: 60px;
+        z-index: 9;
+    }
+    form {
+        margin-bottom: 0px;
+    }
+    .eb-form-control {
+        background-color: transparent;
+        @include borderRadius(0px);
+        border: 0px;
+        font-size: 13px;
+        padding: 15px 100px 15px 15px;
+
+        &:focus {
+            background-color: transparent;            
+        }
+    }
+    .file_attachment {
+        overflow: hidden;
+        width: 21px;
+        height: 21px;
+        cursor: pointer;
+        @media #{$query767} {
+            width: 26px;
+            height: 26px;
+        }
+        input[type="file"] {
+            opacity: 0;
+            width: 21px;
+            height: 21px;
+            position: absolute;
+            left: 0px;
+            top: 0px;
+        }
+    }
+    .btns {
+        position: absolute;
+        right: 20px;
+        top: 50%;
+
+        @include transform(translate(0,-50%));
+
+        .icon-submit {
+            position: relative;
+            z-index: 9;
+            @media #{$query767} {
+                margin-left: 35px;
+                width: 29px;
+                height: 23px;
+            }
+        }
+    }
+}
+.action_dropdown {
+    .dropdown-toggle {
+        color: #fff;
+        font-size: 18px;
+        cursor: pointer;
+        &:after {
+            display: none;
+        }
+    }
+}
+.mCSB_scrollTools {
+    .mCSB_dragger {
+        .mCSB_dragger_bar {
+            background-color: $orange;
+            width: 10px;
+        }    
+    }
+    .mCSB_draggerRail {
+        width: 10px;
+        background-color: #393544;
+    }
+}
+.files_upload_box {
+    position: absolute;
+    width: 100%;
+    left: 0px;
+    bottom: 100%;
+    padding: 10px;
+    z-index: 9;
+    background-color: #33303e;
+
+    .icon-close{
+        position: absolute;
+        right: -3px;
+        top: -3px;
+        width: 15px;
+        height: 15px;
+        background: #d4d4d4;
+        border-radius: 50%;
+        color: red;
+        z-index: 9999;
+        text-align: center;
+        line-height: 15px;
+        font-weight: bold;
+        cursor: pointer;
+    }
+
+    .uploaded_file {
+        position: relative;
+        margin-left: 15px;
+        .video {
+            max-width: 70px;
+            max-height: 70px;
+            width: 100%;
+            height: 100%;
+            background: #000;
+        }
+        .spacer {
+            max-width: 70px;
+            max-height: 70px;
+            width: 100%;
+            height: 100%;
+        }
+        .image {
+            background-size: cover;
+            background-position: center center;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            z-index: 1;
+            cursor: pointer;
+        }
+        .icon_loader {
+            width: 40px;
+            height: 40px;
+        }
+    }
+}
+/************************************************************
+                Messages Page Style End
+*************************************************************/

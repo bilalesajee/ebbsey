@@ -1,0 +1,188 @@
+/************************************************************
+                Edit Profile Style Start
+*************************************************************/
+.mobile_edit_profile_tab_head {
+    padding: 10px;
+    text-align: center;
+    background: $black;
+    margin-bottom: 15px;
+    position: relative;
+    display: none;
+    @media #{$query767} {
+        display: block;
+    }
+    h5 {
+        margin-bottom: 0px;
+        font-weight: bold;
+        font-size: 18px;
+    }
+    .back {
+        color: #fff;
+        position: absolute;
+        left: 7px;
+        top: 11px;
+    }
+}
+.edit_profile_wrapper {
+    padding: 30px 0px;
+    @media #{$query767} {
+        .container {
+            max-width: 100%;
+        }
+    }
+}
+.edit_profile_tabs {
+    background-color: #1b1823;
+    @media #{$query767} {
+        height: 280px;
+        overflow: hidden;
+    }
+    &.activetab {
+        @media #{$query767} {
+            height: auto;
+            overflow: auto;
+        }
+        .nav {
+            @media #{$query767} {
+                left: -110%;
+            }
+        }
+        .tab-content {
+            @media #{$query767} {
+                @include transform(translateX(0px));
+            }
+        }
+    }
+    .nav {
+        background-color: #24212c;
+        @extend %transition;
+        @media #{$query767} {
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            width: 100%;
+            z-index: 1;
+        }
+        > a {
+            padding: 14px 15px;
+            color: #929096;
+            font-weight: 700;
+            text-decoration: none;
+            &.active {
+                background-color: #1b1823;
+                color: $orange;
+            }
+        }
+    }
+    .tab-content {
+        padding: 20px 30px;
+        @extend %transition;
+        @media #{$query767} {
+            transform: translateX(100%);
+            padding: 15px;
+        }
+        @media #{$query479} {
+            padding: 15px 10px;
+        }
+    }
+}
+.edit_profile_image {
+    border: 1px dashed $white;
+    padding: 10px 20px 10px 10px;
+    .image_view {
+        border: 2px solid #46464b;
+        height: 100px;
+        width: 120px;
+        background: {
+            size: cover;
+            position: center center;
+        }
+        @media #{$query767} {
+            height: 80px;
+            width: 100px;
+        }
+    }
+    .btn, .file_upload_btn2 {
+        max-width: 200px;
+        width: 100%;
+    }
+    .action_btns {
+        position: relative;
+        .file_upload_btn2 {
+            display: none;
+        }
+    }
+}
+.total_earning {
+    a {
+        text-decoration: none;
+        display: block;
+        background-color: #16131c;
+        padding: 20px 50px 20px 20px;
+        &:hover {
+            background-color: #0c0913;
+        }
+    }
+    .earning_label {
+        color: $white;
+        text-transform: uppercase;
+        margin-bottom: 7px;
+    }
+    .earning_payment {
+        color: #17b40b;
+        font-weight: 600;
+        font-size: 40px;
+        line-height: 40px;
+    }
+}
+.previous_earning {
+    @media #{$query991} {
+        margin-top: 15px;
+    }    
+    .earning_box {
+        border: 1px solid #1b1823;
+        a {
+            text-decoration: none;
+            display: block;
+            padding: 20px 30px;
+            background-color: #16131c;
+            &:hover {
+                background-color: #0c0913;
+            }
+        }
+        .earning_label {
+            color: rgba(255,255,255,0.51);
+            margin-bottom: 8px;
+        }
+        .earning_payment {
+            font-size: 22px;
+            .icon {
+                display: block;
+                background-size: contain;
+                background-repeat: no-repeat;
+                width: 7px;
+                height: 16px;
+                margin-right: 5px;
+            }
+        }
+        &.current_month {
+            .earning_payment {
+                color: #57a010;
+                .icon {
+                    background-image: url('../images/icons/arrow-up.png');
+                }
+            }
+        }
+        &.previous_month {
+            .earning_payment {
+                color: #ff1515;
+                .icon {
+                    background-image: url('../images/icons/arrow-down.png');
+                }
+            }
+        }
+    }
+}
+/************************************************************
+                Edit Profile Style End
+*************************************************************/

@@ -1,0 +1,52 @@
+/************************************************************
+                Class Detail Page Style Start
+*************************************************************/
+.class_trainer_info {
+    margin-bottom: 15px;
+    .msg_btn {
+        margin-left: auto;
+    }
+}
+.class_detail_page {
+    .class_detail_header {
+        background-color: #24212c;
+        padding: 25px;
+        
+        .time {
+            color: #6c6c6c;
+        }
+    }
+    .class_detail_body {
+        background-color: rgba(14,11,22,0.8);
+        padding: 25px;
+        font-size: 14px;
+        > .row {
+            margin-bottom: 17px;  
+        }
+        .left-side {
+            color: #4e485f;
+            font-weight: 900;
+        }
+        .right-side {
+            color: $white;
+            text-align: right;
+        }
+    }
+    .class_detail_footer {
+        border-top: 1px dashed $white;
+        font-size: 17px;
+        padding-top: 15px;
+        margin-top: 20px;
+        .left-side {
+            color: $orange;       
+        }
+        .right-side {
+            color: $orange;
+            font-weight: 900;
+        }
+    }
+}
+
+/************************************************************
+                Class Detail Page Style End
+*************************************************************/

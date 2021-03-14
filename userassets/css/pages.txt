@@ -1,0 +1,45 @@
+1- Home page --> Done
+2- Password Reset --> Done
+3- Sign in --> Done
+4- Welcome Screen --> Done
+5- About Us
+6- Contact us 
+
+Client Pages
+=========================
+1- Sign Up - Step1 (User) --> Done
+2- Sign Up - Step2 (User) --> Done
+3- Sign Up - Step3 (User) --> Done
+4- Book Trainer Public
+5- Class Page
+6- Book Trainer Book Form (Step 1) 
+7- Book Trainer Book Form (Step 2) 
+8- Book Trainer Book Form (Step 3) 
+9- Book Trainer Book Form (Step 4) 
+10- Book Trainer Book Form (Step 5) 
+11- User-Sessions-personal-about
+12- Sessions-personal-My-Classes
+13- User-Sessions-Personal-Sessions
+14- User-Sessions-Public
+15- User-Sessions-Detail-Page
+16- Business-Form-Order-Step-1
+17- Business-Form-Order-Step-2
+18- Class-Detail
+19- Search-Result-Classes
+20- Search-Result-Trainers
+
+Trainer Pages
+=========================
+1- Sign Up - Step1 (Trainer)
+2- Sign Up - Step2 (Trainer)
+3- Sign Up - Step3 (Trainer) 
+4- Appointments-List
+5- Appointments-List-Suggest-Trainer
+6- Messages
+7- Create-Class
+8- Classes
+9- Classes-Suggest-Trainer
+10- Edit-Profile-Basic-information
+11- Edit-Profile-Earning-&-Payments
+12- Edit-Profile-Hours-&-Availablity
+13- Edit-Profile-Qualification

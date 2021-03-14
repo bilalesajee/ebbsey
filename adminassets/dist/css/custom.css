@@ -1,0 +1,36 @@
+td.table_img img{
+    width: 60px;
+    height: 60px;
+}
+table.tbl th:first-child , table.tbl td:first-child{
+    width: 70px !important;
+}
+table.tbl th.content_col , table.tbl td.content_col{
+     width: 700px !important;
+}
+table.tbl th:last-child , table.tbl td:last-child{
+    width: 70px !important;
+}
+form.setting_form{
+    padding: 25px;
+}
+div.dataTables_wrapper div.dataTables_info {
+    float: left;
+}
+div.dataTables_wrapper div.dataTables_paginate {
+    float: right;
+}
+.paginate_button {
+    background: #f1f1f1;
+    color: #222;
+    padding: 4px 11px;
+    border-radius: 6px;
+    margin: 0 2px;
+    cursor: pointer;
+    display: inline-block;
+}
+.paginate_button.current,
+.paginate_button:hover {
+    background: #f26824;
+    color: #fff;
+}

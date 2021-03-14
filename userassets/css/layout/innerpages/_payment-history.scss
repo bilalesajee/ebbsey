@@ -1,0 +1,22 @@
+/************************************************************
+                About Page Style Start
+*************************************************************/
+.table_payment {
+    font-size: 12px;
+    th {
+        background-color: $orange;
+        color: $white;
+        border: 0px;
+    }
+    td {
+        border-bottom:1px solid #24212c;
+    }
+    tr{
+        &:nth-child(2n) {
+            background-color: #151121;
+        }
+    }
+}
+/************************************************************
+                About Page Style End
+*************************************************************/

@@ -1,0 +1,29 @@
+@import 'variable';
+@import 'mixins';
+@import 'base';
+@import 'icons';
+
+@import 'layout/header/header';
+@import 'layout/header/header_mobile';
+@import 'layout/home/home';
+@import 'layout/innerpages/login';
+@import 'layout/innerpages/userlogin';
+@import 'layout/innerpages/trainerbooking';
+@import 'layout/innerpages/classdetail';
+@import 'layout/innerpages/trainerprofile';
+@import 'layout/innerpages/editprofile';
+@import 'layout/innerpages/createclass';
+@import 'layout/innerpages/classes';
+@import 'layout/innerpages/search';
+@import 'layout/innerpages/appointments';
+@import 'layout/innerpages/messages';
+@import 'layout/innerpages/contact';
+@import 'layout/innerpages/booking';
+@import 'layout/innerpages/about';
+@import 'layout/innerpages/blog';
+@import 'layout/innerpages/custom_package';
+@import 'layout/innerpages/ordercard';
+@import 'layout/innerpages/payment-history';
+@import 'animations';
+
+@import 'layout/footer/footer';

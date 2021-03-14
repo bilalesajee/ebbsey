@@ -1,0 +1,388 @@
+/************************************************************
+                User Login Page Style Start
+*************************************************************/
+.signup_user_wrapper {
+    background: {
+        image: url('../images/usersignup_bg.jpg');
+        size: cover;
+        position: center top;
+    }
+    .overlay {
+        background-color: rgba(14,11,22,0.7);
+        padding: 70px 0px;
+        @media #{$query767} {
+            padding: 40px 0px;
+        }
+    }
+    .title {
+        text-align: center;
+        h5 {
+            text-transform: uppercase;
+            font-weight: 800;
+            margin-bottom: 3px;
+        }
+    }
+    .form-container {
+        max-width: 400px;
+        margin: 0 auto;
+
+        button.btn {
+            margin-top: 30px;
+        }
+        .or {
+            padding: 5px 0px;
+        }
+    }
+    .form_title {
+        margin-bottom: 35px;
+    }
+}
+.signup_user_wrapper {
+    @media #{$query767} {
+        .hidden_tab_info {
+            display: none;
+        }
+    }
+    .tabs_outer {
+        background-color: rgba(0, 0, 0, 0.5);
+        margin: {
+            top: 20px;
+            bottom: 35px;
+        }
+    }
+    .nav-tabs {
+        border-bottom: none;
+        @media #{$query991} {
+            margin-left: auto;
+            margin-right: auto;
+        }
+        li {
+            position: relative;
+            z-index: 2;
+
+            .box {
+                position: absolute;
+                top: -45px;
+                padding: 10px;
+                @include borderRadius(4px);
+                background-color: $orange;
+                white-space: pre;
+                color: $white;
+                left: 50%;
+                @include transform(translateX(-50%));
+                &:after {
+                    content: "";
+                    position: absolute;
+                    left: 50%;
+                    margin-left: -5px;
+                    bottom: -20px;
+                    border: 10px solid transparent;
+                    border-top-color: $orange;
+                }
+            }
+            a {
+                color: rgba(255,255,255,0.5);
+                padding: 15px 30px 15px 20px;
+                display: block;
+                font-weight: 700;
+                text-decoration: none;
+                position: relative;
+                @media #{$query991} {
+                    text-align: center;
+                    font-size: 13px;
+                    padding: 15px 10px;
+                    min-width: auto;
+                }
+                @media #{$query479} {
+                    font-size: 11px;
+                    padding: 15px 6px;
+                }
+
+                &:after {
+                    content: "";
+                    background: url(../images/right-orange.png) no-repeat right center/60px 120px;
+                    position: absolute;
+                    right: 0px;
+                    top: 0;
+                    bottom: 0;
+                    width: 60px;
+                    height: 100%;
+                    @media #{$query991} {
+                        background: #4b4a4f;
+                        width: 100%;
+                        height: 1px;
+                        top: 50%;
+                        margin-top: -12px;
+                        left: 50%;
+                        z-index: -1;
+                    }
+                }
+
+                &:hover,
+                    &.active {
+                    color: $white;
+                    .step_number {
+                        background-color: $orange;
+                    }
+                    .step_number {
+                        background-color: $orange;
+                    } 
+                }
+                .step_number {
+                    width: 25px;
+                    height: 25px;
+                    @include borderRadius(50%);
+                    background-color: #4b4a4f;
+                    text-align: center;
+                    display: inline-block;
+                    font-size: 13px;
+                    line-height: 25px;
+                    margin-right: 5px;
+                    @media #{$query991} {
+                        display: block;
+                        margin: 0 auto 6px;
+                    }
+                }
+
+                &.step_completed {
+                    color: $white;
+                    &:after {
+                        @media #{$query991} {
+                            background: $orange;
+                        }
+                    }
+                    .step_number {
+                        background-color: $orange;
+                        color: $white;
+                    }
+                }
+            }
+
+            &:last-child {
+                a {
+                    &:after {
+                        @media #{$query991} {
+                            display: none;
+                        }
+                    }                 
+                }
+            }
+        }
+    }
+}
+.form_section {
+    margin-bottom: 25px;
+    > h5 {
+        margin-bottom: 13px;
+        font-size: 16px;
+        span {
+            font-size: 13px;
+        }
+    }
+
+    .trainer_type {
+        margin-top: 40px;
+        .trainer_header {
+            background-color: #24212c;
+            padding: 15px;
+            text-align: center;
+            margin-bottom: 10px;
+            .custom-control {
+                margin-bottom: 0px;
+            }     
+            .icon {
+                display: inline-block;
+                margin: {
+                    bottom: 10px;
+                    top: -51px;
+                }
+                @include bg_round_image(100px, center, cover, 50% );
+            }
+        }
+        &.type_personal_trainer {
+            .trainer_header {
+                .icon {
+                    background-image: url('../images/PersonalTrainer.png'); 
+                }
+            }
+        }
+        &.type_group_fitness {
+            .trainer_header {
+                .icon {
+                    background-image: url('../images/GroupFitnessInstructor.png'); 
+                }
+            }
+        }
+        .trainer_body {
+            background-color: #24212c;
+            padding: 20px 25px;
+            @media #{$query767} {
+                padding: 25px 15px;
+            }
+        }
+
+        .upload-documents {
+            margin-bottom: 20px;
+            &:last-child {
+                margin-bottom: 0px;
+            }
+            .upload-header {
+                margin-bottom: 10px;
+                .icon-certificate {
+                    display: inline-block;
+                    width: 37px;
+                    height: 35px;
+                    background-size: cover;
+                    background-image: url('../images/icon-certificate.png'); 
+                    vertical-align: middle;
+                    margin: {
+                        right: 10px;
+                    }
+                }
+            }
+        }
+    }
+}
+textarea.other_reason {
+    @include input-placeholder {
+        color: rgba(255,255,255,0.5);
+    }
+    padding-top: 15px;
+    height: 120px;
+    resize: none;
+}
+.custom-control {
+    margin-bottom: 0.5em;
+}
+.form_section {
+    font-size: 12px;
+}
+
+
+.document_list {
+    padding: 0px;
+    margin: 0px;
+    li {
+        list-style: none;
+        padding: 0px;
+        margin: 0px;
+        width: 20%;
+        margin-bottom: 7px;
+        padding-right: 7px;
+
+        @media #{$query991} {
+            width: 33.333%;
+        }
+        @media #{$query767} {
+            width: 20%;
+        }
+        @media #{$query479} {
+            width: 33.333%;
+        }
+
+        .thumbnail {
+            position: relative;                    
+            background: {
+                size: cover;
+                repeat: repeat;
+                position: center center;
+            }
+            &.approved-doc {
+                .actions {
+                    border: 1px solid #3dff00;
+                    font-size: 12px;
+                    color: #3dff00;
+                    i {
+                        color: #3dff00;
+                        font-size: 17px;
+                    }
+                }
+            }
+
+            .actions {
+                display: none;
+                position: absolute;
+                top: 0px;
+                left: 0px;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(0,0,0,0.9);
+                border: 1px solid $orange;
+                font-size: 15px;
+                i {
+                    margin: 0 5px;
+                    cursor: pointer;
+                }
+            }
+            &:hover .actions {
+                display: flex;
+            }
+        }
+    }
+}
+
+.classes_schedule {
+    width: 100%;
+    font-size: 13px;
+    thead {
+
+    }
+    tbody {
+        tr {
+            &:nth-child(even) {
+                td {
+                    background-color: #24212c;
+                    border-right: 1px solid #1b1823;
+                }   
+            }
+            td {
+                background-color: #1b1823;
+                border-right: 1px solid #24212c;
+
+                &:hover {
+                    .close_time {
+                        display: inline-block;
+                    }
+                }
+            }
+        }
+    }
+    th {
+        background-color: $orange;
+        color: $white;
+        &:first-child {
+            border-radius: 10px 0 0 0;
+        }
+        &:last-child {
+            border-radius: 0 10px 0 0;
+        }
+    }
+    th, td {
+        padding: 15px 10px;
+        text-align: center;
+        position: relative;
+    }
+    .close_time {
+        font-size: 17px;
+        cursor: pointer;
+        color: #ed1c24;
+        display: none;
+        margin-left: 5px;
+        position: absolute;
+        right: 0px;
+        top: 50%;
+        @include transform(translateY(-50%));
+    }
+}
+.add_availability_btn {
+    background: #0e0b16;
+    color: $white;
+    border: 1px solid $orange;
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 15px 0 0 0;
+    cursor: pointer;
+}
+/************************************************************
+                User Login Page Style End
+*************************************************************/

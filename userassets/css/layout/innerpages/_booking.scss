@@ -1,0 +1,511 @@
+/************************************************************
+                Booking Page Style Start
+*************************************************************/
+.full_calender_view_link {
+    text-align: right;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    padding: 0 70px;
+    font-size: 12px;
+    @media #{$query767} {
+        display: none;
+    }
+    > span {
+        cursor: pointer;
+        &:hover {
+            color: $white;
+        }
+    }
+
+}
+.calender_popup {
+    .calender_header {
+        background-color: $orange;
+        color: $white;
+        > div {
+            padding: 7px 10px;
+            width: 100%;
+            @include flex();
+            @include align-items(center);
+            @include justify-content(center);
+        }
+    }
+    .calender_body {
+        background-color: #1b1823;
+        color: $white;        
+        .date_box {
+            padding: 7px 10px;
+            width: 14.28%;
+            border: 1px solid #4b455b;
+            @include flex();
+            @include align-items(center);
+            @include justify-content(center);
+            position: relative;
+            font-weight: 700;
+            font-size: 13px;
+
+            &.previous_days, &.next_days {
+                opacity: 0.15;
+            }
+            .number {
+                position: absolute;
+                left: 0px;
+                top: 0px;
+                width: 100%;
+                height: 100%;
+                padding: 40px 10px 10px 10px;
+            }
+            .icon_selected {
+                position: absolute;
+                right: 12px;
+                top: 12px;
+                width: 24px;
+                height: 24px;
+            }
+            input[type="radio"] {
+                position: absolute;
+                left: 0px;
+                top: 0px;
+                width: 100%;
+                height: 100%;
+                z-index: 10;
+                opacity: 0;
+                cursor: pointer;
+            }
+        }
+    }
+}
+.pay-now-section {
+    border: 1px solid #615f67;
+    padding: 12px;
+    @include borderRadius(7px);
+    position: relative;
+    .payment_label {
+        margin-right: 15px;
+        @media #{$query991} {
+            margin-right: 7px;
+        }
+        .btn {
+            background-color: #4e485f;
+            font-weight: 900;
+            @include borderRadius(7px);
+            font-size: 20px;
+        }
+    }
+    .payment_content {
+        h6, p {
+            margin-bottom: 0px;
+        }
+        h6 {
+            color: #fff;
+            font-weight: 900;
+        }
+        p {
+            color: #4e485f;
+        }
+    }
+    .payment_selected {
+        margin-left: auto;
+    }
+    input[type="radio"] {
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        width: 100%;
+        height: 100%;
+        z-index: 10;
+        opacity: 0;
+        cursor: pointer;
+    }
+
+    &.element-selected {
+        .payment_label {
+            .btn {
+                background-color: #557724;
+            }
+        }
+        .payment_content {
+            h6 {
+                color: $orange;
+            }
+        }
+    }
+}
+.calender_carousel {
+    padding: 0 58px;
+    &.owl-carousel {
+        .owl-nav {
+            .owl-prev, .owl-next {
+                border: 1px solid #3e3c42;
+                width: 45px;
+                height: 45px;
+                @include borderRadius(50%);
+                @include flex();
+                @include align-items(center);
+                @include justify-content(center);
+
+                position: absolute;
+                top: 50%;
+                margin-top: -22.5px;
+                z-index: 15;
+
+                @extend %transition;
+
+                &:hover {
+                    border-color:$white;
+                }
+                &:focus {
+                    outline: none;
+                }
+
+                span {
+                    width: 20px;
+                    height: 20px;
+                    display: inline-block;
+                    background: { 
+                        size: contain;
+                        repeat: no-repeat;
+                        position: center center;
+                    }
+                }
+            }
+            .owl-prev {
+                left: 0px;
+                span {
+                    background-image: url('../images/icons/arrow-previous.png');
+                }
+            }
+            .owl-next {
+                right: 0px;
+                span {
+                    background-image: url('../images/icons/arrow-next.png');
+                }
+            }
+        }
+        .owl-stage-outer {
+            padding-right: 10px;
+        }
+    }
+}
+.day-box {
+    border: 1px solid #3e3c42;
+    @include borderRadius(10px);
+    padding: 25px 15px;
+    position: relative;
+    z-index: 1;
+
+    &.element-selected {
+        .date {
+            color: $white;
+        }
+    }
+
+    .icon-calender {
+        margin-bottom: 20px;
+        width: 84px;
+        height: 89px;
+        background-image: url(../images/icons/icon-calender1.png);
+    }
+    .day-name {
+        font-weight: 900;
+        text-transform: uppercase;
+    }
+    .icon_selected {
+        margin: 20px 0px;
+    }
+    .date {
+        color: #8b8a8f;
+        font-weight: 900;
+        font-size: 12px;
+    }
+    input[type="radio"] {
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        width: 100%;
+        height: 100%;
+        z-index: 10;
+        opacity: 0;
+        cursor: pointer;
+    }
+}
+.booking-page {
+    .overlay {
+        @media #{$query991} {
+            padding: 30px 0px;
+        }
+    }
+    .booking_header {
+        padding: 0px 40px 15px 40px;
+        @media #{$query991} {
+            padding: 0px 25px 15px 25px;
+        }
+        @media #{$query767} {
+            padding: 0px 15px 15px 15px;
+        }
+    }
+    .booking_name {
+        font-weight: 300;
+        margin-bottom: 15px;
+        @media #{$query991} {
+            font-size: 25px;
+        }
+        @media #{$query767} {
+            font-size: 22px;
+        }
+    }
+    .booking_step_progress_bar {
+        background-color: #59575e;
+        height: 5px;
+        position: relative;
+        &.bottom {
+            height: 3px;
+        }
+        > span {
+            background-color: $orange;
+            display: block;
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            height: 100%;
+            @include transition( all 0.25s cubic-bezier(0, 0, 0.27, 0.98) 0.1s );
+        }
+    }
+    .steps {
+        font-weight: 900;
+        @media #{$query576} {
+            width: 100%;
+            margin-top: 10px;
+            text-align: right;
+        }
+
+    }
+    .trainer_type {
+        font-weight:  700;
+        &.grey {
+            color: #8b8893;
+        }
+        @media #{$query991} {
+            font-size: 13px;
+        }
+    }
+    .step_detail {
+        text-align: center;
+        padding: 40px;
+        @media #{$query991} {
+            padding: 40px 25px;
+        }
+        @media #{$query767} {
+            padding: 20px 15px;
+        }
+        .title {
+            margin-bottom: 30px;
+            h5 {
+                font-weight: 700;
+                margin-bottom: 3px;
+            }
+        }
+    }
+    .time-period {
+        max-width: 800px;
+        margin: 0 auto 25px;
+        .block {
+            border: 1px solid #6c6c6c;
+            @include borderRadius(20px);
+            padding: 30px 25px;
+            position: relative;
+            min-height: 315px;
+            margin-bottom: 15px;
+            @media #{$query991} {
+                min-height: 305px;
+            }
+            @media #{$query576} {
+                min-height: inherit;
+                max-width: 270px;
+                margin: 0 auto 15px;
+            }
+
+            input[type="radio"] {
+                position: absolute;
+                left: 0px;
+                top: 0px;
+                width: 100%;
+                height: 100%;
+                z-index: 10;
+                opacity: 0;
+                cursor: pointer;
+            }
+            .name {
+                font-weight: 900;
+                margin: 20px 0px;
+            }
+        }
+    }
+    .booking_footer {
+        padding: 15px 40px;
+        border-top: 1px solid #3e3c42;
+        background-color: #0f0c17;
+        @media #{$query991} {
+            padding: 15px 25px;
+        }
+        @media #{$query767} {
+            padding: 15px 15px;
+        }
+        .next_step {
+            color: #5e5e62;
+            font-weight: 900;
+            @media #{$query767} {
+                margin-bottom: 10px;
+            }
+        }
+    }
+}
+.session_time {
+    max-width: 710px;
+    margin: 0 auto;
+    .time {
+        position: relative;
+        display: inline-block;
+        margin-right: 10px;
+        margin-bottom: 10px;
+        font-size: 12px;
+        span {
+            border: 1px solid #6c6c6c;
+            color: $white;
+            font-weight:    700;
+            padding: 13px 15px;
+            @include borderRadius(5px);
+            display: block;
+        }
+        input[type="radio"] {
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            z-index: 10;
+            cursor: pointer;
+            &:checked ~ span {
+                background-color: $orange;
+            }
+        }
+    }
+}
+.session_type_step {
+    .session_label {
+        border: 1px solid #6c6c6c;
+        @include borderRadius(10px);
+        padding: 15px 25px;
+        margin-bottom: 20px;
+        font-size: 13px;
+
+        &.active {
+            border-color: $orange;
+        }
+    }
+}
+.price-plan-wrap {
+    border: 1px solid #6c6c6c;
+    padding: 105px 25px 25px 25px;
+    font-size: 12px;
+    position: relative;
+    height: 100%;
+
+
+    @media #{$query1199} {
+        padding: 105px 10px 15px 10px;
+    }
+    @media #{$query991} {
+        margin-bottom: 20px;
+        height: auto;
+    }
+    @media #{$query767} {
+        margin-bottom: 15px;
+    }
+
+    @extend %transition;
+
+    &.element-selected {
+        border-color: $orange;
+        .passes_info  {
+            color: $orange;
+        }
+    }
+    h5 {
+        font-weight: 700;
+        margin-bottom: 0px;
+    }
+    .passes_info {
+        color: #8b8893;
+        padding-bottom: 22px;
+        line-height: 27px;
+        .price {
+            display: block;
+            font-size:30px;
+            font-weight: 700;
+        }
+    }
+    .info {
+        ul {
+            padding: 0px;
+            li {
+                padding: 8px;
+                border-bottom: 1px solid rgb(86, 86, 86);
+                list-style: none;
+                color: #cfccd8;
+                font-weight: 700;
+            }
+        }
+        @media #{$query991} {
+            display: none;
+        }
+    }
+    .info_wrap {
+        border-top: 1px solid #6c6c6c;
+        padding-top: 20px;
+        .mobile_info_button {
+            color: $orange;
+            display: block;
+            margin-bottom: 15px;
+            cursor: pointer;
+            position: relative;
+            z-index: 5;
+            &:hover {
+                color: $white;
+            }
+            .hide_info {
+                display: none;
+            }
+        }
+    }
+    .icon-money {
+        position: absolute;
+        left: 50%;
+        top: 0px;
+        @include translate( -50%, 0%);
+    }
+    input[type="radio"] {
+        height: 100%;
+        width: 100%;
+        cursor: pointer;
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        opacity: 0;
+    }
+}
+.booking-page {
+    .modal_price_packages {
+        .step_detail {
+            padding: 0px;
+        }
+    }    
+}
+.modal_price_packages {
+    width: 100%;
+    max-width: 98%;    
+}
+/************************************************************
+                Booking Page Style End
+*************************************************************/

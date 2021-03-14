@@ -1,0 +1,45 @@
+1-	Home Page:			DONE
+2-	forget Password			DONE
+3-	Sign In				DONE
+4-	Welcome to Ebbsey		DONE
+5-	About Us
+6-	Contact Us
+
+Client Screens
+1-	Signup (Basic Information)	DONE
+2-	Signup (Fitness Goal)		DONE
+3-	Signup (Readiness)		DONE
+4-	Class Page			DONE
+5-	Trainer Page			DONE
+6-	About
+7-	My Classes			DONE
+8-	My Session			DONE
+9-	Session About
+10-	Session Detail
+11-	Business Form Step 1
+12-	Business Form Step 1
+13-	Class Detail page
+14-	Search Classes Result		DONE	
+15-	Search Trainer Result		DONE
+16-	Trainer Booking Form step 1
+17-	Trainer Booking Form step 2
+18-	Trainer Booking Form step 3
+19-	Trainer Booking Form step 4
+20-	Trainer Booking Form step 5
+
+Trainer Screens
+1-	Step 1 (Basic Information)		DONE
+2-	Step 2 (Qualifaction)			DONE
+3-	Step 3 (Hours & Availability)		DONE
+4-	Appointment Listing			DONE
+5-	Trainer Suggestion			DONE
+6-	Messages
+7-	Create Class				DONE
+8-	Classes					DONE
+9-	Edit Profile				DONE
+10-	Earning & Payment			DONE
+11-	Hours & Availability			DONE
+12-	Qualification				DONE
+
+
+22 Pages Done

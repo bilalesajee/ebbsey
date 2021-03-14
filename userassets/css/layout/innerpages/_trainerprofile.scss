@@ -1,0 +1,434 @@
+/************************************************************
+                Trainer Profile Page Style Start
+*************************************************************/
+.disabled {
+    pointer-events: none;
+}
+.session_map {
+    border-bottom: 4px solid #f26824;
+    height: 100%;
+    position: fixed;
+    left: 0px;
+    top: 104px;
+    width: 50%;
+    @media #{$query767} {
+        position: relative;
+        width: 100%;
+        top: 0px;
+    }
+    .spacer {
+        width: 100%;
+    }
+    #map {
+        width: 100% !important;
+        height: 100% !important;  
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        border: 0px;
+    }
+}
+.profile_header {
+    background-image: url('../images/image12.jpg');
+    .overlay {
+        background-color: rgba(14,11,12,0.8);
+    }
+
+    .profile_image {
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 100%;
+        max-height: 280px;
+    }
+    .user_info {
+
+        padding: 20px 30px;
+        @media #{$query991} {
+            padding: 20px 0px 0px 0px;
+        }
+        .profile_image_mobile {
+            @include bg_round_image(110px, center, cover, 50% );
+            margin-right: 15px;
+            display: none;
+            @media #{$query991} {
+                display: block;
+            }
+            @media #{$query767} {
+                width: 85px;
+                height: 85px;
+            }
+            @media #{$query479} {
+                width: 65px;
+                height: 65px;
+            }
+        }
+        h1 {
+            font-weight: 800;
+            @media #{$query767} {
+                font-size: 27px;
+            }
+        }
+        > div {
+            font-size: 13px;
+            i {
+                margin-right: 10px;
+            }  
+        }
+        .passes {
+            background-color: #1b1823;
+            padding: 12px 15px;
+            @include shadow(-6px -6px 10px 0 rgba(0,0,0,.16) inset);
+            max-width: 215px;
+            margin-top: 20px;
+            font-size: 15px;
+            @media #{$query991} {
+                margin-top: 10px;
+            }
+            .passes_detail {
+                font-weight: 800;
+                margin-bottom: 3px;
+                > span {
+                    float: right;  
+                }
+            }
+            a {
+                color: $orange;
+                font-size: 13px;
+                text-decoration: underline;
+                display: inline-block;
+                margin-top: 10px;
+            }
+        }
+    }
+}
+.profile_tab {
+    margin-top: 0px;
+    .nav-tabs {
+        border-bottom: 0px;
+        .nav-link {
+            border: 0px;
+            @include borderRadius(0px);
+            color: #4e485f;
+            border-bottom: 2px solid transparent;
+            padding: .7rem 1.5rem;
+            @media #{$query991} {
+                border-bottom: 2px solid #4e485f;
+            }
+
+            &.active {
+                background-color: transparent;
+            }
+            &:hover, &.active {
+                border: 0px;
+                border-bottom: 2px solid $orange;
+                color: $orange;
+            }
+        }
+        .nav-item {
+            margin-bottom: 0px;
+        }
+    }
+}
+.tab-content {
+    &.profile {
+        padding: 20px 0px;
+    }
+}
+.session_listing {
+    padding: 0px 0px 0px 0px;
+    margin: 0px;
+    list-style: none;
+    > li {
+        background-color: #1b1823;
+        margin-bottom: 15px;
+        border-radius: 10px 10px 0 0;        
+    }
+    li {
+        &:last-child {
+            margin-bottom: 0px;
+        }
+    }
+    .profile_info {
+        padding: 15px 20px;
+        background-color: #24212c;
+        border-radius: 10px 0px 0 0;
+        width: 32%;
+        @media #{$query991} {
+            width: 100%;
+        }
+        .info {
+            .name {
+                font-size: 20px;
+            }
+        }
+    }
+    .detail {
+        padding: 15px 20px;
+        font-size: 13px;
+        width: 68%;
+        @media #{$query991} {
+            width: 100%;
+        }
+        .info {
+            .row {
+                margin-bottom: 25px;
+                @media #{$query991} {
+                    margin-bottom: 10px;
+                }
+                @media #{$query576} {
+                    margin-bottom: 10px;
+                }
+                &:last-child {
+                    margin-bottom: 0px;
+                }
+            }
+        }
+        .btns-group {
+            align-self: center;
+            max-width: 170px;
+            width: 100%;
+            @media #{$query991} {
+                max-width: 100%;
+                margin-top: 15px;
+            }
+            .btn {
+                height: 42px;
+                line-height: 41px;
+                width: 100%;
+                margin-bottom: 15px;
+                font-size: 13px;
+                @media #{$query991} {
+                    margin-bottom: 0px;
+                    width: auto;
+                    margin-right: 10px;
+                }
+
+                &:last-child {
+                    margin-bottom: 0px;
+                }
+            }
+        }
+    }
+}
+.user_login_details {
+    font-size: 12px;
+    @media #{$query991} {
+        margin-top: 15px;
+    }
+
+    .session_info {
+        padding: 6px 15px 4px 15px;
+        display: inline-block;
+        background-color: #435f0e;
+        @include borderRadius(25px);
+        margin-top: 7px;
+    }
+}
+
+
+.classes_listing {
+    padding: 0px 0px 0px 0px;
+    margin: 0px;
+    list-style: none;
+
+    li {
+        background-color: #1b1823;
+        margin-bottom: 15px;
+        @include borderRadius(10px 10px 0 0);
+
+        &:last-child {
+            margin-bottom: 0px;
+        }
+    }
+    .class-image {
+        background:{
+            size: cover;
+            repeat: no-repeat;
+            position: center center;
+        }
+        @include borderRadius(10px 0px 0 0);
+        @media #{$query991} {
+            height: 175px;
+            @include borderRadius(10px 10px 0 0);
+        }
+
+        @media #{$query767} {
+            height: 150px;
+        }
+        .class_status {
+            position: absolute;
+            left: 0px;
+            bottom: 0px;
+            height: 32px;
+            line-height: inherit;
+            width: auto;
+            padding: 5px 20px;
+            @include borderRadius(0 20px 20px 0);
+        }
+    }
+    .class-detail {
+        padding: 15px 20px 0px 20px;
+        font-size: 13px;
+        @media #{$query767} {
+            padding: 15px 15px 0px 15px;
+        }
+
+        .class-head {
+            border-bottom: 1px solid rgba(76,73,84,0.5);
+            padding-bottom: 10px;
+
+            .trainer_type {
+                color: $orange;
+                font-weight: bold;
+                @media #{$query400} {
+                    display: block !important;
+                }
+                > div {
+                    @include flex();
+                    margin-right: 13px;
+                    font-size: 12px;
+                    @media #{$query400} {
+                        margin-right: 0px;
+                        margin-bottom: 5px;
+                    }
+                }
+            }
+        }
+        .info {
+            padding: 20px 0 0 0;
+        }
+
+        .detail{
+            padding: 15px 0px;
+            .row {
+                margin-bottom: 10px;
+
+                &:last-child {
+                    margin-bottom: 0px;
+                }
+            }
+        }
+    }
+    .btns-group {
+        @media #{$query991} {
+            margin-bottom: 15px;
+        }
+        .btn {
+            height: 38px;
+            line-height: 37px;
+            font-size: 13px;
+            width: 100%;
+            margin: 0 4px;
+            padding: 0 18px;
+            &:last-child {
+                margin-bottom: 0px;
+            }
+            @media #{$query991} {
+                max-width: 150px;
+            }
+        }
+    }
+    .class-time {
+        padding: 20px 0 15px 0;
+        @media #{$query991} {
+            padding: 0px 0 15px 0;
+        }
+        &:before {
+            content: "";
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            height: 100%;
+            width: 1px;
+            background:rgba(76, 73, 84, 0.5);
+            @media #{$query991} {
+                display: none;
+            }
+        }
+        h6 {
+            color: #8b8893;
+            font-weight: 800;
+            text-transform: uppercase;
+            margin: 0 0 10px 0;
+        }
+        .schedule {
+            font-size: 12px;
+
+            > div {
+                margin-bottom: 7px;
+                @include align-items(center);
+            }
+            .day {
+                width: 35%;
+                color: #4e485f;
+                font-weight: 800;
+                @media #{$query991} {
+                    width: auto;
+                    margin-right: 10px;
+                }
+            }
+            .time {
+                width: 65%;
+                @media #{$query991} {
+                    width: auto;
+                }
+                > span {
+                    padding: 6px 15px 4px 15px;
+                    display: block;
+                    background-color: $orange;
+                    @include borderRadius(25px);
+                    text-align: center;
+                }
+            }
+        }
+    }
+}
+.trainer_reviews_section {
+    .review-title {
+        color: $orange;
+        font-weight: bold;
+        font-style: italic;
+        margin-bottom: 25px;
+    }
+}
+.trainer_reviews_list {
+    &.mCustomScrollbar {
+        max-height: 350px;
+        overflow-y: auto;
+
+        li {
+            padding-bottom: 15px;
+            margin-bottom: 15px;
+            &:last-child {
+                margin-bottom: 0px;            
+            }
+        }
+    }
+    padding: 0px;
+    margin: 0px;
+    list-style: none;
+    .profile_info .info .name {
+        margin-bottom: 5px;
+    }
+    li {
+        border-bottom: 1px solid #2c2c2c;
+        padding-bottom: 20px;
+        margin-bottom: 20px;
+    }
+    .review_body {
+        .review_text {
+            color: #76747b;
+            font-style: italic;
+            font-size: 14px;
+        }
+        .date {
+            color: #76747b;
+            font-size: 12px;
+            margin-top: 10px;
+            text-align: right;
+        }
+    }
+}
+/************************************************************
+                Trainer Profile Page Style End
+*************************************************************/

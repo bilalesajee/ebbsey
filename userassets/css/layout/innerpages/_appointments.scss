@@ -1,0 +1,269 @@
+/************************************************************
+                Appintments Page Style Start
+*************************************************************/
+.appoinments_listing_search {
+    position: relative;
+    @media #{$query767} {
+        .form-control {
+            padding-right: 100px;
+        }
+        > .btn {
+            position: absolute;
+            right: 0px;
+            top: 0px;
+            height: 100%;
+            padding: 0 20px;
+        }
+    }    
+}
+.pac-container { 
+    z-index: 100000; 
+}
+.appointment-box {
+    background: #1b1823;
+    @include borderRadius(10px);
+    margin-top: 15px;
+    position: relative;
+
+    .head {
+        padding: 15px;
+        background-color: #24212c;
+        @include borderRadius(10px 10px 0 0);
+
+        .action_btns {
+            margin-top: 15px;
+            a {
+                width: 45%;
+                text-align: center;
+                font-size: 13px;
+                @media #{$query479} {
+                    width: 100%;
+                }
+            }
+        }
+    }
+    .body {
+        padding: 20px;
+        font-size: 13px;
+    }
+    .profile_info {
+        .image {
+            margin-right: 10px;
+        }
+        .info {
+            width: 100%;
+            .name {
+                font-size: 16px;
+                margin-bottom: 0px;
+            }
+            .btn {
+                height: 24px;
+                line-height: 23px;
+                padding: 0px 10px;
+                font-size: 11px;
+                margin-left: auto;
+            }
+        }
+    }
+    .response_btns {
+        a {
+            width: 50%;
+            font-size: 12px;
+            padding: 10px 10px;
+            text-align: center;
+            border: 0px;
+            color: #fff;
+
+            &:first-child {
+                @include borderRadius(0px 0px 0px 10px);
+            }
+            &:last-child {
+                @include borderRadius(0px 0px 10px 0px);
+            }
+            &.btn_green {
+                background-color: #278948;
+            }
+            &.btn_red {
+                background-color: #a93232;
+            }
+            &.btn_black {
+                background-color: #24212c;
+            }
+        }
+    }
+}
+
+.appoinments_listing {
+    padding: 0px 0px 0px 0px;
+    margin: 0px;
+    list-style: none;
+    > li {
+        background-color: #1b1823;
+        margin-bottom: 15px;
+        border-radius: 10px 10px 0 0;        
+    }
+    li {
+        &:last-child {
+            margin-bottom: 0px;
+        }
+    }
+    .profile_info {
+        padding: 15px 20px;
+        background-color: #24212c;
+        border-radius: 10px 0px 0 0;
+        width: 30%;
+
+        @media #{$query991} {
+            text-align: center;
+        }
+        @media #{$query767} {
+            width: 100%;
+            text-align: left;
+        }
+        @media #{$query479} {
+            padding: 15px 10px;
+        }
+        .image {
+            margin-right: 15px;
+            .img {
+                width: 90px;
+                height: 90px;
+                @media #{$query991} {
+                    margin: 0 auto 10px;
+                }
+                @media #{$query767} {
+                    margin: 0 auto 0px;
+                    width: 75px;
+                    height: 75px;
+                }
+            }
+        }
+        .info {
+            .name {
+                font-size: 20px;
+                margin-bottom: 5px;
+            }
+            .btn { 
+                height: 30px;
+                line-height: 30px;
+                font-size: 12px;
+                padding: 0 14px;
+                margin-top: 7px;
+            }
+        }
+    }
+    .detail {
+        padding: 15px 20px;
+        font-size: 13px;
+        width: 70%;
+        @media #{$query767} {
+            width: 100%;
+        }
+        @media #{$query479} {
+            padding: 15px 10px;
+        }
+        .info {
+            .row {
+                margin-bottom: 25px;
+                &:last-child {
+                    margin-bottom: 0px;
+                }
+            }
+        }
+        .btns-group {
+            max-width: 150px;
+            width: 100%;
+            @media #{$query991} {
+                max-width: 100%;
+            }
+            .btn {
+                height: 38px;
+                line-height: 38px;
+                width: 100%;
+                margin-bottom: 10px;
+                font-size: 13px;
+                padding-left: 25px;
+                padding-right: 25px;
+                @media #{$query991} {
+                    width: auto;
+                    margin-bottom: 0px;
+                    margin-top: 10px;
+                }
+                &:last-child {
+                    margin-bottom: 0px;
+                }
+            }
+        }
+    }
+}
+.refer_trainer_list_wrap {
+    max-height: 300px;
+    overflow-y: auto;    
+}
+.refer_trainer_list {
+    padding: 0px;
+    margin: 0px;
+    list-style: none;
+    li {
+        border-bottom: 1px solid #4e485f;
+        padding-bottom: 10px;
+        margin-bottom: 10px;
+
+        &:last-child {
+            margin-bottom: 0px;
+            border-bottom: 0px solid #4e485f;
+        }
+    }
+    .btn_message {
+        padding: 4px 15px;
+        font-size: 12px;
+        min-width: 105px;
+        font-weight: 700;
+        text-align: center;
+        > i {
+            margin-right: 2px;
+        }
+        &.refered {
+            background-color: $orange;
+            border-color: $orange;
+            color: $white;
+        }
+    }
+    .profile_info {
+        @media #{$query767} {
+            margin-bottom: 10px;
+        }
+        .image {
+            margin-right: 12px;
+            .img {
+                width: 55px;
+                height: 55px;
+            }
+        }
+        .info {
+            .name {
+                font-size: 15px;
+                line-height: 15px;
+                margin-bottom: 3px;
+            }
+            .type {
+                font-size: 12px;
+            }
+        }
+    }
+}
+.filter_appointments_wrap {
+    .filter {
+        background-color: #19191e;
+        margin: 0px;
+        @media #{$query767} {
+            margin-bottom: 10px;
+        }
+    }
+    .records_found {
+        margin-top: 0px;
+    }
+}
+/************************************************************
+                Appintments Page Style End
+*************************************************************/

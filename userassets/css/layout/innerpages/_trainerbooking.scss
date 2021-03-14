@@ -1,0 +1,171 @@
+/************************************************************
+                Trainer Booking Page Style Start
+*************************************************************/
+.bg_blue {
+    background-color: $dark_blue;
+}
+.trainer_slider {
+    border-bottom: 4px solid $orange;
+    height: 100%;
+    position: fixed;
+    left: 0px;
+    top: 104px;
+    width: 50%;
+
+    @media #{$query767} {
+        position: relative;
+        top: 0px;
+        width: 100%;
+        height: auto;
+    }
+
+    .owl-stage-outer,
+    .owl-stage,
+    .owl-item, .item,
+    .slide_img {
+        height: 100%;
+    }
+    .slide_img {
+        height: 100%;
+        background: {
+            size: cover;
+            position: center top;
+        }
+        width: 100%;
+        @media #{$query767} {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+        }
+    }
+    &.owl-carousel {
+        .owl-nav {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+
+            .owl-prev, .owl-next {
+                position: absolute;
+                top: 50%;
+                width: 25px;
+                height: 25px;
+                display: inline-block;
+                background: { 
+                    size: contain;
+                    repeat: no-repeat;
+                    position: center center;
+                }
+                &:focus {
+                    outline: none;
+                }
+            }
+            .owl-prev {
+                left: 15px;
+                background-image: url('../images/icons/arrow-previous.png');
+            }
+            .owl-next {
+                right: 15px;
+                background-image: url('../images/icons/arrow-next.png');
+            }
+        }   
+        .spacer {
+            width: 100%;
+            display: none;
+
+            @media #{$query767} {
+                display: block;
+            }
+        }
+    }
+}
+.trainer_details_wrap {
+    padding: 30px 50px;
+    @media #{$query1199} {
+        padding: 25px 35px;
+    }
+    @media #{$query767} {
+        padding: 20px 15px;
+    }
+    .trainer-header {
+        border-bottom: 1px solid #2d2a35;
+        padding: {
+            bottom: 10px;
+        }
+        margin-bottom: 15px;
+        h1 {
+            color: $white;
+            font-weight: 300;
+            font-size: 32px;
+            margin-right: 10px;
+            @media #{$query991} {
+                font-size: 30px;
+            }
+        }
+        .trainer_type {
+            color: $orange;
+            font-weight: bold;
+            > div {
+                @include flex();
+                margin-right: 13px;
+                font-size: 12px;
+            }
+        }
+        .right_side {
+            max-width: 140px;
+            width: 100%;
+            padding-top: 10px;
+
+            @include space-between;
+            font-size: 12px;
+
+            @media #{$query991} {
+                padding-top: 7px;
+                max-width: 100%;
+            }
+        }
+        .social_media2 li a {
+            width: 30px;
+            height: 30px;
+        }
+    }
+    .short_info {
+        font-size: 13px;
+        margin-bottom: 35px;
+    }
+    > .btn {
+        margin-top: 20px;
+    }
+}
+.trainer_details_list {
+    font-size: 12px;
+    margin: {
+        bottom: 30px;
+    }
+    > h6 {
+        margin-bottom: 3px;
+    }
+    > div {
+        @include flex();
+        border-bottom: 1px solid rgba(76,73,84,0.5);
+    }
+    .left-side,
+    .right-side {
+        padding: 7px;        
+    }
+    .left-side {
+        width: 40%;
+        color: #4e485f;
+        font-weight: 800;
+    }
+    .right-side {
+        width: 60%;        
+    }
+}
+.rate_number {
+    font-weight: 700;
+    font-size: 22px;
+    color: $white;
+}
+/************************************************************
+                Trainer Booking Page Style End
+*************************************************************/

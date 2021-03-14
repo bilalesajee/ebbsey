@@ -1,0 +1,39 @@
+/************************************************************
+                Login Page Style Start
+*************************************************************/
+.login_wrapper {
+    background: {
+        image: url('../images/image7.jpg');
+        size: cover;
+        position: center top;
+    }
+    padding: 70px 0px;
+
+    @media #{$query767} {
+        padding: 40px 0px;
+    }
+
+    .form-container {
+        max-width: 400px;
+        margin: 0 auto;
+
+        button.btn {
+            margin-top: 30px;
+        }
+        .or {
+            padding: 5px 0px;
+            @media #{$query767} {
+                padding: 0px 0px;
+            }
+        }
+    }
+    .form_title {
+        margin-bottom: 35px;
+        @media #{$query767} {
+            margin-bottom: 15px;
+        }
+    }
+}
+/************************************************************
+                Login Page Style End
+*************************************************************/

@@ -1,0 +1,26 @@
+.trial_offer {
+    background: {
+        image: url('../images/image1.jpg');
+        size: cover;
+        position: center -50px;
+    }
+    text-align: center;
+
+    .overlay {
+        background-color: rgba(242,104,36, 0.8);
+        padding: 60px 0px;
+    }
+    h2 {
+        color: $white;
+        margin-bottom: 25px;
+        font: {
+            weight: 800;
+            size: 32px;
+        }
+        @media #{$query767} {
+            font: {
+                size: 28px;
+            }
+        }
+    }
+}

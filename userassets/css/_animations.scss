@@ -1,0 +1,5 @@
+@include keyframes(revealTop) {
+    0%{top: -100%}
+    50% {top: 0%;}
+    100% {top: 100%;}
+}

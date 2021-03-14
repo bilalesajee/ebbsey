@@ -1,0 +1,61 @@
+/************************************************************
+                        Footer Style Start
+*************************************************************/
+.footer {
+    background: {
+        image: url('../images/footer-bg.jpg');
+        size: cover;
+        position: center top;
+    }
+    @media #{$query991} {
+        text-align: center;
+    }
+    .overlay {
+        background-color: rgba(0,0,0,0.79);
+        padding: 45px 0px;
+        @media #{$query991} {
+            padding: 45px 0px 25px 0px;
+        }
+    }
+    @media #{$query991} {
+        .footer-logo {
+            margin-bottom: 15px;
+            img {
+                max-width: 160px;
+            }
+        }
+    }
+
+
+
+    .footer_menu {
+        a {
+            color: $lightGrey;
+            display: inline-block;
+            margin-right: 25px;
+        }
+    }
+    .copyright {
+        color: #fafbfd;
+        margin-top: 10px;
+        font: {
+            size: 13px;
+            family:muli;
+            weight: 300;
+        }
+        a {
+            color: #fafbfd;
+            padding: 0 5px;
+            display: inline-block;
+        }
+        .company {
+            a {
+                color: $orange;
+                padding: 0 5px;
+            }
+        }
+    }
+}
+/************************************************************
+                     Footer Style Start End
+*************************************************************/

@@ -1,0 +1,206 @@
+/************************************************************
+                        Icons Style 
+*************************************************************/
+.icon_loader {
+    background: {
+        image: url('../images/icons/loadmore.svg');
+        size: cover;
+    }
+    width: 70px;
+    height: 70px;
+    display: inline-block;
+}
+.icon_social {
+    background-size: cover;
+    width: 25px;
+    height: 25px;
+    margin-right: 10px;
+    display: inline-block;
+}
+.icon_facebook {
+    background-image: url('../images/icons/facebook.jpg');
+}
+.icon_instagram {
+    background-image: url('../images/icons/instagram.png');
+}
+.icon_twitter {
+    background-image: url('../images/icons/twitter.png');
+}
+.icon-trainer, .icon-groupfitness{
+    display: inline-block;
+    background: { 
+        size: contain;
+        repeat: no-repeat;
+    }
+}
+.icon-star {
+    width: 29px;
+    height: 29px;
+    margin-right: 5px;
+    background: {
+        image: url('../images/icons/ratingsystem.png');
+        repeat: no-repeat;
+        size: 147px auto;
+        position: 0px -31px;
+    }
+    &.rate1 {
+        background-position: 0px -31px;
+    }
+    &.rate2 {
+        background-position: -29px -31px;
+    }
+    &.rate3 {
+        background-position: -59px -31px;
+    }
+    &.rate4 {
+        background-position: -88px -31px;
+    }
+    &.rate5 {
+        background-position: -118px -31px;
+    }
+}
+.icon-trainer {
+    width: 26px;
+    height: 25px;
+    margin-right: 10px;
+    background: { 
+        image: url('../images/icons/icon-trainer.png');
+    }    
+    &.grey {
+        background: {
+            image: url('../images/icons/icon-trainer-grey.png');
+        }    
+    }
+}
+.icon-groupfitness {
+    width: 23px;
+    height: 26px;
+    margin-right: 10px;
+    background: {
+        image: url('../images/icons/icon-grouptrainer.png');
+    }    
+    &.grey {
+        background: {
+            image: url('../images/icons/icon-grouptrainer-grey.png');
+        }
+    }
+}
+.icon-sun {
+    width: 25px;
+    height: 25px;
+    margin-right: 10px;
+    display: inline-block;
+    background: {
+        image: url('../images/icons/icon-sun.png');
+        size: cover;
+        position: center center;
+    }
+}
+.icon-cloud {
+    width: 31px;
+    height: 19px;
+    margin-right: 10px;
+    display: inline-block;
+    background: {
+        image: url('../images/icons/icon-cloud.png');
+        size: cover;
+        position: center center;
+    }
+}
+.icon-night {
+    width: 27px;
+    height: 17px;
+    margin-right: 10px;
+    display: inline-block;
+    background: {
+        image: url('../images/icons/icon-night.png');
+        size: cover;
+        position: center center;
+    }
+}
+.icon-clock {
+    width: 100px;
+    height: 100px;
+    display: inline-block;
+    background: {
+        image: url('../images/icons/clock.png');
+        size: cover;
+        position: center center;
+    }                 
+}
+.icon-calender {
+    width: 100px;
+    height: 100px;
+    display: inline-block;
+    background: {
+        image: url('../images/icons/icon-calender.png');
+        size: cover;
+        position: center center;
+    }
+    &.grey {
+        background: {
+            image: url('../images/icons/icon-calender1.png');
+        }
+    }
+}            
+.icon_selected {
+    width: 35px;
+    height: 35px;
+    display: inline-block;
+    @include borderRadius(50%);
+    background: {
+        image: url('../images/icons/icon-circle.png');
+        size: cover;
+        position: center center;
+    } 
+}
+.element-selected {
+    .icon_selected {
+        background: {
+            image: url('../images/icons/icon-circle-selected.png');
+        } 
+    }
+    .icon-clock {
+        background: {
+            image: url('../images/icons/clock-selected.png');
+        }             
+    } 
+    .icon-money {
+        background: {
+            image: url('../images/icons/icon-money-selected.png');
+        }
+    }
+}
+.icon-money {
+    width: 46px;
+    height: 78px;
+    display: inline-block;
+    background: {
+        image: url('../images/icons/icon-money.png');
+        size: cover;
+        position: center center;
+    }
+}
+.icon-attachment {
+    display: inline-block;
+    cursor: pointer;
+    background: {
+        image: url('../images/icons/icon-attach.png');
+        size: contain;
+        repeat: no-repeat;
+    }
+    width: 21px;
+    height: 21px;
+}
+.icon-submit {
+    display: inline-block;
+    cursor: pointer;
+    background: {
+        image: url('../images/icons/icon-send.png');
+        size: contain;
+        repeat: no-repeat;
+    }
+    width: 24px;
+    height: 19px;
+    margin-left: 15px;
+}

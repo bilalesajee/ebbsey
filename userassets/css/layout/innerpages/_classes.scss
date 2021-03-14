@@ -1,0 +1,47 @@
+/************************************************************
+                Create Class Page Style Start
+*************************************************************/
+.title_bar {
+    background-color: #19191e;
+    padding: 12px 20px;
+    border-bottom: 2px solid $orange;
+    color: #7c7c7c;
+    font-weight: 900;
+    margin-bottom: 15px;
+}
+.classes_listing {
+    &.trainer {
+        .class-head {
+            margin-bottom: 10px;
+        }
+        .class-detail {
+            padding: 15px 20px;
+        }
+        .class-time {
+            padding: 10px 0 5px 0;
+        }
+        .short-desc {
+            color: #9f9f9f;
+            p:last-child {
+                margin-bottom: 0px;
+            }
+        }
+    }
+}
+.search_append_btn {
+    width: 100%;
+    position: relative;
+    padding-right: 55px;
+    @media #{$query767} {
+        padding-right: 43px;
+    }
+    .btn {
+        position: absolute;
+        right: 0px;
+        top: 0px;
+        height: 100%;
+    }
+}
+/************************************************************
+                Create Class Page Style End
+*************************************************************/

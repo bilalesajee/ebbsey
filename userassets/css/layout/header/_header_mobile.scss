@@ -1,0 +1,186 @@
+/***********************************************
+                Mobile Header
+***********************************************/
+.mobile_header {
+    background-color: $orange;
+
+    @media #{$querymin992} {
+        display: none;
+    }
+    .logo {
+        a {
+            display: block;
+            img {
+                max-width: 185px;
+            }
+        }
+    }
+    .menu_button {
+        padding: 15px 25px;
+        position: relative;
+        cursor: pointer;
+
+        &:after {
+            position: absolute;
+            content: '';
+            left: 0px;
+            top: 0px;
+            width: 100%;
+            height: 100%;
+            background: #fff;
+            @include transform(skewX(-25deg));
+        }
+        .bars {
+            position: relative;
+            width: 30px;
+            float: left;
+            height: 22px;
+            display: block;
+            z-index: 1;
+
+            span {
+                display: block;
+                width: 30px;
+                height: 2px;
+                background: $black;
+                cursor: pointer;
+
+                transition: all 0.35s ease-in-out;
+                -moz-transition: all 0.35s ease-in-out;
+                -webkit-transition: all 0.35s ease-in-out;
+                -ms-transition: all 0.35s ease-in-out;
+                -o-transition: all 0.35s ease-in-out;
+
+                transform-origin: center center;
+                transform: rotate(0deg);
+                -moz-transform: rotate(0deg);
+                -webkit-transform: rotate(0deg);
+                -ms-transform: rotate(0deg);
+                -o-transform: rotate(0deg);
+
+                opacity: 1;
+                visibility: visible;
+                position: absolute;
+                right: 0px;
+
+                &:first-child {
+                    top: 0px;
+                }
+                &:nth-child(2) {
+                    top: 10px;
+                }
+                &:last-child {
+                    bottom: 0px;
+                }
+            }
+        }
+    }
+}
+.mobile_menu_wrap {
+    background-color: #fff;
+    position: fixed;
+    top: 60px;
+    left: 0px;
+    width: 100%;
+    height: calc(100% - 94px);
+    z-index: 9;
+    overflow: auto;
+    opacity: 0;
+    visibility: hidden;
+    @extend %transition;
+    &.messages {
+        height: calc(100% - 52px);
+    }
+    &.open-menu {
+        &.messages {
+            top: 52px;
+        }
+        top: 94px;
+        opacity: 1;
+        visibility: visible;
+    }
+}
+.mobile_navigation {
+    padding: 0px;
+    margin: 0px;
+    border-top: 1px solid #f0f0f0;
+    li {
+        a {
+            color: #7a7676;
+            padding: 10px 15px;
+            display: inline-block;
+            width: 100%;
+            font-weight: bold;
+            .badge {
+                background-color: $orange;
+                width: 23px;
+                height: 23px;
+                line-height: 23px;
+                text-align: center;
+                padding: 0px;
+                float: right;
+                @include borderRadius(50%);
+                color: $white;
+            }
+            &:hover {
+                background-color: #f0f0f0;
+            }
+        }
+        &.active {
+            a {
+                background-color: #f0f0f0;
+            }
+        }
+    }
+}
+.mobile_profile {
+    padding: 10px 15px;
+
+    .earning {
+        margin-top: 10px;
+        .earning_label {
+            color: #cbcfcd;
+            font-weight: 900;
+            font-size: 13px;
+        }
+        .amount {
+            color: #00a651;
+            font-weight: 900;
+            font-size: 18px;
+        }
+    }
+    .profile_info {
+        font-weight: 900;
+        .image {
+            margin-right: 10px;
+            .img {
+                width: 55px;
+                height: 55px;
+            }   
+        }
+        .info {
+            .type  {
+                color: $black;
+            }
+        }
+    }
+    .edit_profile {
+        .btn {
+            height: 35px;
+            line-height: 35px;
+            padding: 0px 17px;
+        }
+    }
+    .profile_btns {
+        padding: 10px;
+        @media #{$query479} {
+            padding: 10px 0px;
+        }
+        .btn {
+            font-weight: bold;
+            @media #{$query479} {
+                padding: 0px 35px;
+            }
+        }
+    }
+}

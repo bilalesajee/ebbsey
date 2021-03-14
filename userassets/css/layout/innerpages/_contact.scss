@@ -1,0 +1,79 @@
+/************************************************************
+                Contact Page Style Start
+*************************************************************/
+.contact_form_section {
+    background: {
+        image: url('../images/image19.jpg'); 
+        position: center center;
+        size: cover;
+    }
+
+    .overlay {
+        background-color: rgba(14,11,22,0.8);
+        padding: 70px 0px;
+        @media #{$query991} {
+            padding: 40px 0px;
+        }
+    }
+}
+.contact_map {
+    #map {
+        height: 400px;
+        @media #{$query991} {
+            height: 250px;
+        }
+        @media #{$query767} {
+            height: 180px;
+        }
+    }
+}
+
+.popup-tip-anchor {
+    height: 0;
+    position: absolute;
+    width: 320px;
+
+    .popup-bubble-anchor {
+        position: absolute;
+        width: 100%;
+        bottom: 8px;
+        left: 0;
+
+        &:after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            @include transform(translate(-50%, 0));
+            width: 0;
+            height: 0;
+            border-left: 6px solid transparent;
+            border-right: 6px solid transparent;
+            border-top:8px solid $orange;
+        }
+    }
+
+    .popup-bubble-content {
+        position: absolute;
+        top: 0;
+        left: 0;
+        @include transform(translate(-50%, -100%));
+        background-color: $orange;
+        padding: 20px 50px;
+        @include borderRadius(4px);
+        font: {
+            family: Muli;
+            size: 14px;
+        }
+
+        p {
+            margin-bottom: 10px;
+            &:last-child {
+                margin-bottom: 0px;
+            }   
+        }
+    }
+}
+/************************************************************
+                Contact Page Style End
+*************************************************************/

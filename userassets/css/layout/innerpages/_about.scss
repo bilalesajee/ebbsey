@@ -1,0 +1,135 @@
+/************************************************************
+                About Page Style Start
+*************************************************************/
+.about_features_wrap {
+    background: {
+        image: url('../images/image21.jpg');
+        size: cover;
+        position: center top;
+    }
+    .overlay {
+        background-color: rgba(14,11,22,0.8);
+        padding-bottom: 50px;
+    }
+    .title {
+        text-align: center;
+        padding: 60px 0 10px;
+        @media #{$query767} {
+            padding: 40px 0 0px;
+        }
+    }
+}
+.about_features {
+    padding: 0px;
+    margin: 30px auto 0px auto;
+    max-width: 750px;
+    list-style: none;
+    position: relative;
+
+    li {
+        width: 100%;
+        padding: 0px 0px 20px 0;
+        @include flex();
+        position: relative;
+        min-height: 80px;
+        &:after {
+            content: '';
+            height: 100%;
+            width: 1px;
+            background: #4e485f;
+            position: absolute;
+            left: 50%;
+            margin-left: -0.5px;
+            top: 0px;
+            @media #{$query767} {
+                display: none;
+            }
+        }
+        &:last-child:after {
+            display: none;
+        }
+        &:nth-child(odd) {
+            @include justify-content(flex-end);            
+        }
+        &:nth-child(even) {
+            text-align: right;
+            @media #{$query767} {
+                .number {
+                    left: auto;
+                    right: 0%;
+                }
+                .block {
+                    margin-left: 0px;
+                    margin-right: 59px;
+                }
+            }
+        }
+        .number {
+            @include borderRadius(50%);
+            @include flex();
+            @include align-items(center);
+            @include justify-content(center);
+
+            @include transform(translateX(-50%));
+            width: 45px;
+            height: 45px;
+            color: $white;
+            background-color: $orange;
+            border: 1px solid #4e485f;
+            font-weight: bold;
+            position: absolute;
+            z-index: 1;
+            left: 50%;
+            font-size: 18px;
+
+            @media #{$query767} {
+                left: 0%;
+                @include transform(translateX(0%));
+            }
+        }
+        .block {
+            font-size: 13px;
+            width: 45%;
+            @media #{$query991} {
+                width: 43%;
+            }
+            @media #{$query767} {
+                width: 100%;
+                margin-left: 59px;
+            }
+            h6 {
+                font-weight: 700;
+                font-size: 17px;
+            }
+            p {
+                color: #74717b;
+            }
+        }
+    }
+}
+.about_top_part {
+    background: {
+        image: url('../images/image20.png');
+        size: cover;
+        position: center top;
+    }
+    padding: 260px 0px 20px 0px;
+    @media #{$query767} {
+        padding: 80px 0px 40px 0px;
+    }
+
+    .content-wrap {
+        max-width: 450px;
+        margin: 0 auto;
+        h5 {
+            margin-bottom: 15px;
+        }
+        p {
+            font-size: 13px;
+        }
+    }
+
+}
+/************************************************************
+                About Page Style End
+*************************************************************/

@@ -1,0 +1,75 @@
+.featured_classes_trainers {
+    padding: 50px 0 20px 0;
+    background: {
+        image: url('../images/featured-classes-bg.png');
+        size: cover;
+        position: center top;
+    }
+    h2 {
+        text-align: center;
+        color: $black;
+        @media #{$query767} {
+            font-size: 28px;
+        }
+    }
+    .short_description {
+        color: $black;
+        max-width: 800px;
+        margin: 0 auto 40px auto;
+        text-align: center;
+        @media #{$query767} {
+            margin: 0 auto 25px auto;
+        }
+    }
+    .nav-tabs {
+        margin-bottom: 10px;
+        border-bottom: 0px;
+        li {
+            margin-left: 25px;
+            a {
+                color: #78797a;
+                font-weight: 900;
+                &.active {
+                    color: $orange;
+                }
+            }
+        }        
+    }
+}
+.trainer_box {
+    background: rgba(89,119,142,0.10);
+    margin-bottom: 30px;
+    @media #{$query991} {
+        margin-bottom: 15px;
+    }
+    a {
+        display: block;
+        text-decoration: none;
+
+        &:hover .name {
+            color: $orange;
+        }
+    }
+    .image {
+        height: 180px;
+        width: 40%;
+        margin-right: 20px;
+        background-size: cover;
+        background-position: center center;
+        @media #{$query991} {
+            width: 50%;
+            margin-right: 10px;
+            height: 140px;
+        }
+    }
+    .name {
+        font-weight: 700;
+        color: $grey;
+        font-size: 20px;
+        @extend %transition;
+        @media #{$query991} {
+            line-height: 21px;
+            font-size: 17px;
+        }
+    }
+}

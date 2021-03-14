@@ -1,0 +1,178 @@
+/************************************************************
+                Search Page Style Start
+*************************************************************/
+.search_sidebar {
+    background-color: #1b1823;
+    padding: 15px;
+    height: 100%;
+    @extend %transition;
+
+    @media #{$query991} {
+        height: calc(100% - 94px);
+        position: fixed;
+        left: -100%;
+        width: 100%;
+        top: 94px;
+        z-index: 9;
+        overflow: auto;
+    }
+    &.open {
+        @media #{$query991} {
+            left: 0%;
+        }
+    }
+    .eb-form-control {
+        height: 42px;
+    }
+    .form_section {
+        margin-bottom: 24px;
+        h6 {
+            font-size: 14px;
+        }
+    }
+}
+.search_result {
+    .eb-form-control {
+        padding-right: 45px;
+        background-color: #08070d;
+    }
+}
+.records_found {
+    border-bottom: 2px solid $orange;
+    padding: 10px 20px;
+    color: #7c7c7c;
+    font-weight: 900;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    font-size: 17px;
+
+    &.dark {
+        background-color: #19191e;
+    }
+}
+.search_record_listing {
+    padding: 0px;
+    margin: 0px;
+    > li {
+        margin-bottom: 15px;
+    }
+    .trainer {
+        background-color: #1b1823;
+        @include borderRadius(10px 10px 0 0);
+        .profile_info {
+            padding: 15px 20px;
+            background-color: #24212c;
+            @include borderRadius(10px 0px 0 0);
+            width: 35%;
+            .image {
+                .img {
+                    width: 80px;
+                    height: 80px;
+                }
+            }
+            .info {
+                .name {
+                    margin-bottom: 6px;
+                    font-size: 17px;
+                }
+            }
+        }
+        .detail {
+            padding: 15px 20px;
+            font-size: 13px;
+            width: 65%;
+            .info {
+                > .row {
+                    &:last-child {
+                        margin-bottom: 0px;
+                    }
+                    margin-bottom: 20px; 
+                }
+            }
+        }
+    }
+    .social_media li img {
+        max-width: 20px;
+    }
+    .btns-group {
+        @media #{$query991} {
+            margin-top: 15px;
+        }
+        .btn {
+            &:last-child {
+                margin-bottom: 0px;
+            }
+            height: 42px;
+            line-height: 41px;
+            margin-bottom: 15px;
+            font-size: 13px;
+            padding-left: 30px;
+            padding-right: 30px;
+            margin-left: auto;
+            @media #{$query991} {
+                 margin-left: 0;
+            }
+        }
+    }
+
+    .class {
+        background-color: #1b1823;
+        @include borderRadius(10px 10px 0 0);
+        .class-image {
+            @include borderRadius(10px 0px 0 0);
+            width:30%;
+            background: {
+                size: cover;
+                position: center top;
+            }
+            @media #{$query991} {
+                width: 100%;
+                height: 175px;
+                @include borderRadius(10px 10px 0 0);
+            }
+            @media #{$query767} {
+                height: 150px;
+            }
+        }
+        .class-detail {
+            padding: 15px 20px;
+            width: 70%;
+            font-size: 13px;
+            .class-head {
+                border-bottom: 1px solid rgba(76,73,84,0.5);
+                padding-bottom: 10px;
+                margin-bottom: 15px;
+                .trainer_type {
+                    color: $orange;
+                    font-weight: bold;
+                }
+            }
+            @media #{$query991} {
+                width: 100%;
+            }
+        }
+    }
+}
+.search_filter_btn {
+    margin-left: 15px;
+    span {
+        height: 47px;
+        width: 51px;
+        background-color: $orange;
+        cursor: pointer;
+        @include borderRadius(2px);
+        .icon {
+            background: {
+                image: url('../images/icons/filter-results-button.png');
+                position: center center;
+                size: contain;
+            }
+            height: 30px;
+            width: 30px;
+            display: block;
+        }
+    }
+}
+/************************************************************
+                Search Page Style End
+*************************************************************/
